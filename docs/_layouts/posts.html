@@ -1,0 +1,45 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Embulk: {{ page.title }}</title>
+<link rel="stylesheet" href="{{ "/assets/css/embulk.css" | relative_url }}" type="text/css" />
+</head>
+<body id="post">
+  {% include header.html %}
+  <main>
+    <article>
+      <section id="article">
+        <h2>{{ page.title }}</h2>
+        <div class="content">
+          {{ content }}
+        </div>
+      </section>
+      <section id="collation">
+        <ul>
+{% if page.author %}
+          <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
+{% endif %}
+{% if page.authors %}
+{% assign authorCount = page.authors | size %}
+{% if authorCount == 0 %}
+{% elsif authorCount == 1 %}
+          <li>Author: <a href="https://github.com/{{ page.authors | first }}">@{{ page.authors | first }}</a></li>
+{% else %}
+          <li>Authors:
+    {% for author in page.authors %}
+            <a href="https://github.com/{{ author }}">@{{ author }}</a>
+    {% endfor %}
+          </li>
+{% endif %}
+{% endif %}
+          <li>Created at: {{ page.date | date: "%B %d, %Y" }}</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  {% include footer.html %}
+</body>
+</html>
