@@ -1,2 +1,2 @@
-docs.embulk.org
-================
+dev.embulk.org
+===============
