@@ -80,7 +80,11 @@ header nav h1 span.subtitle a {
     text-decoration: none;
 }
 
-header nav h1 a:hover {
+header nav h1 span.embulk a:hover {
+    text-decoration: underline;
+}
+
+header nav h1 span.subtitle a:hover {
     text-decoration: underline;
 }
 
