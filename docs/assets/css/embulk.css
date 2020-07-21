@@ -13,7 +13,7 @@ div.content {
     margin-left: 1em;
 }
 
-p > code {
+p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     font-family: 'Roboto Mono', monospace;
     background-color: #f7f7f7;
     padding-left: 2px;
@@ -21,6 +21,10 @@ p > code {
     padding-top: 1px;
     padding-bottom: 1px;
     color: #333333;
+}
+
+a > code {
+    color: inherit;
 }
 
 pre {
@@ -223,6 +227,28 @@ body#post main article h2 {
     padding-bottom: 3px;
     margin-bottom: 1em;
     border-bottom: solid 1px #cccccc;
+}
+
+h3 {
+    font-size: 120%;
+    padding-bottom: 2px;
+    border-bottom: dashed 1px #dddddd;
+}
+
+h4 {
+    font-size: 110%;
+    padding-bottom: 1px;
+    border-bottom: dotted 1px #dddddd;
+}
+
+h5 {
+    font-size: 100%;
+}
+
+h5:before {
+    content: "\00bb";
+    padding-left: 1px;
+    padding-right: 5px;
 }
 
 ul.posts {
