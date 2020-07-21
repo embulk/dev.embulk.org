@@ -2,10 +2,12 @@
 layout: posts
 title: "Java plugins to catch up with Embulk v0.10 from v0.9"
 date: 2020-07-21 17:56:50 +0900
-last_modified_at: 2020-07-21 17:56:50 +0900
+last_modified_at: 2020-07-21 18:07:35 +0900
 authors:
 - "dmikurube"
 ---
+
+**The page would be updated according to Embulk updates.**
 
 ### Apply the Gradle plugin `org.embulk.embulk-plugins`
 
