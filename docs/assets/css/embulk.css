@@ -13,7 +13,7 @@ div.content {
     margin-left: 1em;
 }
 
-p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, th code, td code  {
     font-family: 'Roboto Mono', monospace;
     background-color: #f7f7f7;
     padding-left: 2px;
@@ -41,6 +41,25 @@ pre > code {
     font-family: 'Roboto Mono', monospace;
     line-height: 180%;
     color: black;
+}
+
+table {
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    margin-left: 2em;
+    border-collapse:  collapse;
+}
+
+table th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: solid 2px;
+    padding-right: 1em;
+}
+
+table td {
+    border-bottom: solid 1px;
+    padding-right: 1em;
 }
 
 body {
