@@ -137,6 +137,7 @@ They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.
 | Guava `Throwables` | Read [Guava's document](https://github.com/google/guava/wiki/Why-we-deprecated-Throwables.propagate) |
 | `org.joda.time.*` | `java.time.*` |
 | `org.jruby.*` | Stop using it -- [embulk-util-rubytime](https://dev.embulk.org/embulk-util-rubytime/) may work for parsing date-time  |
+| `javax.*` | See [JEP 320](https://openjdk.java.net/jeps/320), and check if it's removed in Java 11+ ([Issue](https://github.com/embulk/embulk/issues/1270)) |
 | `SuppressFBWarnings` | Remove it -- FindBugs is no longer supported |
 | `ModelManager` | Stop using it, and build your own Jackson `ObjectMapper` |
 | `@Config` | `@org.embulk.util.config.Config` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
