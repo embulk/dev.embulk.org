@@ -127,20 +127,25 @@ Those are deprecated. Use [`embulk-util-timestamp`](https://dev.embulk.org/embul
 
 They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.embulk.org/embulk-util-config/) instead.
 
-### If your plugin uses the following calls...
+### If your plugin uses the followings :
 
-* Embulk's `org.embulk.spi.Exec.getLogger`
-    * &raquo; Use SLF4J's `org.slf4j.LoggerFactory.getLogger` directly.
-* Embulk's `org.embulk.spi.Timestamp`
-    * &raquo; Use Java 8's standard `java.time.Instant` instead as far as possible.
-* Embulk's `@ConfigInject`
-    * &raquo; Stop using it, and try getting the same instance from `org.embulk.spi.Exec`.
-* Embulk's `org.embulk.config.ModelManager`
-    * &raquo; Build Jackson's `com.fasterxml.jackson.databind.ObjectMapper` of your own.
-* Guava's `com.google.common.base.Optional`
-    * &raquo; Use Java 8's standard `java.util.Optional`
-* Guava's `com.google.common.base.Throwables`
-    * &raquo; Stop using it. See Guava's [Why we deprecated Throwables.propagate](https://github.com/google/guava/wiki/Why-we-deprecated-Throwables.propagate).
+| Old | New |
+|---|---|
+| `Exec.getLogger` | `org.slf4j.LoggerFactory.getLogger` |
+| `org.embulk.spi.Timestamp` | `java.time.Instant` as far as possible |
+| Guava `Optional` | `java.util.Optional` |
+| Guava `Throwables` | Read [Guava's document](https://github.com/google/guava/wiki/Why-we-deprecated-Throwables.propagate) |
+| `SuppressFBWarnings` | Remove it -- FindBugs is no longer supported |
+| `ModelManager` | Stop using it, and build your own Jackson `ObjectMapper` |
+| `@Config` | `@org.embulk.util.config.Config` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `@ConfigDefault` | `@org.embulk.util.config.ConfigDefault` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `@ConfigInject` | `Exec.get???()` |
+| `ConfigSource#loadConfig` | `ConfigMapper#map` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `TaskSource#loadTask` | `TaskMapper#map` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Task` | `org.embulk.util.config.Task` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `org.embulk.spi.json.*` | `org.embulk.util.json.*` in [embulk-util-json](https://dev.embulk.org/embulk-util-json/) |
+| `TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
+| `TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 
 ### Release your plugin to RubyGems.org, and your preferred Maven repository in addition
 
