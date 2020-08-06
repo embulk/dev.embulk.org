@@ -135,6 +135,8 @@ They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.
 | `org.embulk.spi.Timestamp` | `java.time.Instant` as far as possible |
 | Guava `Optional` | `java.util.Optional` |
 | Guava `Throwables` | Read [Guava's document](https://github.com/google/guava/wiki/Why-we-deprecated-Throwables.propagate) |
+| `org.joda.time.*` | `java.time.*` |
+| `org.jruby.*` | Stop using it -- [embulk-util-rubytime](https://dev.embulk.org/embulk-util-rubytime/) may work for parsing date-time  |
 | `SuppressFBWarnings` | Remove it -- FindBugs is no longer supported |
 | `ModelManager` | Stop using it, and build your own Jackson `ObjectMapper` |
 | `@Config` | `@org.embulk.util.config.Config` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
