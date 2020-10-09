@@ -146,7 +146,18 @@ They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.
 | `ConfigSource#loadConfig` | `ConfigMapper#map` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
 | `TaskSource#loadTask` | `TaskMapper#map` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
 | `Task` | `org.embulk.util.config.Task` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `ColumnConfig` | `org.embulk.util.config.units.ColumnConfig` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `SchemaConfig` | `org.embulk.util.config.units.SchemaConfig` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `LocalFile` in `PluginTask` | Use `org.embulk.util.config.modules.LocalFileModule` and `org.embulk.util.config.units.LocalFile` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Charset` in `PluginTask` | Use `org.embulk.util.config.modules.CharsetModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Column` in `PluginTask` | Use `org.embulk.util.config.modules.ColumnModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Schema` in `PluginTask` | Use `org.embulk.util.config.modules.SchemaModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Type` in `PluginTask` | Use `org.embulk.util.config.modules.TypeModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `Timestamp` in `PluginTask` | (deprecated) Use `org.embulk.util.config.modules.TimestampModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
+| `DateTimeZone` in `PluginTask` | Use `java.time.ZoneId` with `org.embulk.util.config.modules.ZoneIdModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) |
 | `org.embulk.spi.json.*` | `org.embulk.util.json.*` in [embulk-util-json](https://dev.embulk.org/embulk-util-json/) |
+| `org.embulk.spi.util.*` | `org.embulk.util.file.*` in [embulk-util-file](https://dev.embulk.org/embulk-util-file/), or `org.embulk.util.text.*` in [embulk-util-text](https://dev.embulk.org/embulk-util-text/) |
+| `RetryExecutor` | `org.embulk.util.retryhelper.RetryExecutor` in [embulk-util-retryhelper](https://dev.embulk.org/embulk-util-retryhelper/) |
 | `TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 | `TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 
