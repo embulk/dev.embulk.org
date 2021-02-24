@@ -170,7 +170,7 @@ compileOnly "org.embulk:embulk-api:0.10.XX"
 compileOnly "org.embulk:embulk-spi:0.10.XX"
 ```
 
-Once you have done replacements explained above, `org.embulk:embulk-core` should no longer be required. (If you see an error, it means that you have something remaining.)
+Once you have done the replacements explained above, `org.embulk:embulk-core` should no longer be required. (If you see an error, it means that you have something remaining.)
 
 ### Release your plugin to RubyGems.org, and your preferred Maven repository in addition
 
