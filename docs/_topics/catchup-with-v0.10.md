@@ -161,6 +161,17 @@ They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.
 | `TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 | `TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 
+### If your plugin depends on `org.embulk:embulk-core`
+
+Remove `org.embulk:embulk-core`, and depend only on the following two instead.
+
+```
+compileOnly "org.embulk:embulk-api:0.10.XX"
+compileOnly "org.embulk:embulk-spi:0.10.XX"
+```
+
+Once you have done replacements explained above, `org.embulk:embulk-core` should no longer be required. (If you see an error, it means that you have something remaining.)
+
 ### Release your plugin to RubyGems.org, and your preferred Maven repository in addition
 
 Java-based Embulk plugins are to be released as Maven artifacts, in addition to Ruby gems. When releasing your plugin, run two tasks like that, to release a Maven artifact and a Ruby gem.
