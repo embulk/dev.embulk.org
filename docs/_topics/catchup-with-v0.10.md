@@ -2,7 +2,7 @@
 layout: posts
 title: "Java plugins to catch up with Embulk v0.10 from v0.9"
 date: 2020-07-21 17:56:50 +0900
-last_modified_at: 2020-07-21 18:07:35 +0900
+last_modified_at: 2021-04-09 10:50:49 +0900
 authors:
 - "dmikurube"
 ---
@@ -79,7 +79,7 @@ signing {  // Maven Central needs signing.
 
 ### If your plugin uses Jackson, Guava, Apache commons-lang3, or `javax.validation`
 
-Include those libraries explicitly in `dependencies`. Use **the 100% same versions** with `embulk-core`.
+Include those libraries explicitly in `dependencies`. Use **the 100% same versions** with `org.embulk:embulk-core:0.10.29`.
 
 ```
 "com.fasterxml.jackson.core:jackson-annotations:2.6.7"
@@ -161,16 +161,25 @@ They will be gradually deprecated. Try using [`embulk-util-config`](https://dev.
 | `TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 | `TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 
-### If your plugin depends on `org.embulk:embulk-core`
+### If your plugin depends on `org.embulk:embulk-core` for the main code
 
 Remove `org.embulk:embulk-core`, and depend only on the following two instead.
 
 ```
-compileOnly "org.embulk:embulk-api:0.10.XX"
-compileOnly "org.embulk:embulk-spi:0.10.XX"
+compileOnly "org.embulk:embulk-api:0.10.29"
+compileOnly "org.embulk:embulk-spi:0.10.29"
 ```
 
 Once you have done the replacements explained above, `org.embulk:embulk-core` should no longer be required. (If you see an error by removing `org.embulk:embulk-core`, it means that you still have something to replace.)
+
+### Tests
+
+Tests still need to depend on `org.embulk:embulk-core`, and in addition, `org.embulk:embulk-deps`.
+
+```
+testCompile "org.embulk:embulk-core:0.10.29"
+testCompile "org.embulk:embulk-deps:0.10.29"
+```
 
 ### Release your plugin to RubyGems.org, and your preferred Maven repository in addition
 
