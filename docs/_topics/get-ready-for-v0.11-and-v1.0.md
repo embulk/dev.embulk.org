@@ -2,6 +2,7 @@
 layout: posts
 title: "For Embulk plugin developers: Get ready for v0.11 and v1.0!"
 date: 2021-04-26 17:49:30 +0900
+last_modified_at: 2021-04-26 18:02:15 +0900
 authors:
 - "dmikurube"
 ---
@@ -553,3 +554,9 @@ Tests still need to depend on `org.embulk:embulk-core`, and in addition, `org.em
 testCompile "org.embulk:embulk-core:0.10.??"
 testCompile "org.embulk:embulk-deps:0.10.??"
 ```
+
+You may want to use some internal (`embulk-core`-only) classes in tests. Typical instances can be retrieved from `org.embulk.spi.ExecInternal`, such as `ExecInternal.getModelManager()` to get `org.embulk.config.ModelManager`.
+
+Note that such internal classes may easily drop its compatibility. For example, `ModelManager` has already dropped `public <T> T readObject(Class<T>, com.fasterxml.jackson.core.JsonParser)` and `public <T> T readObjectWithConfigSerDe(Class<T>, com.fasterxml.jackson.core.JsonParser)`.
+
+The testing framework would be improved through v0.11.
