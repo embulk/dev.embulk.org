@@ -468,6 +468,8 @@ compile "javax.annotation:javax.annotation-api:1.2"
     * Exported as [`embulk-util-file`](https://dev.embulk.org/embulk-util-file/)
 * Processing text (ex. `LineDecoder` and `LineEncoder` in `org.embulk.spi.util`)
     * Exported as [`embulk-util-text`](https://dev.embulk.org/embulk-util-text/)
+* Dynamic column setter (ex. `DynamicColumnSetter` in `org.embulk.spi.util`)
+    * Exported as [`embulk-util-dynamic`](https://dev.embulk.org/embulk-util-dynamic/)
 * Retries (ex. `RetryExecutor` in `org.embulk.spi.util`)
     * Exported as [`embulk-util-retryhelper`](https://dev.embulk.org/embulk-util-retryhelper/)
 
@@ -544,7 +546,7 @@ compile "javax.annotation:javax.annotation-api:1.2"
 
 | Old | New |
 |---|---|
-| `org.embulk.spi.util.*` | [embulk-util-file](https://dev.embulk.org/embulk-util-file/), [embulk-util-text](https://dev.embulk.org/embulk-util-text/), or [embulk-util-retryhelper](https://dev.embulk.org/embulk-util-retryhelper/) |
+| `org.embulk.spi.util.*` | [embulk-util-file](https://dev.embulk.org/embulk-util-file/), [embulk-util-text](https://dev.embulk.org/embulk-util-text/), [embulk-util-dynamic](https://dev.embulk.org/embulk-util-dynamic/), or [embulk-util-retryhelper](https://dev.embulk.org/embulk-util-retryhelper/) |
 
 #### Tests
 
