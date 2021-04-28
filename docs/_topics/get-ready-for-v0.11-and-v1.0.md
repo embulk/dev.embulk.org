@@ -48,7 +48,7 @@ dependencies {
     // Your Gradle needs to be 6, not 7, then. (We'll be working on it to support Gradle 7.)
 
     // Some libraries "org.embulk:embulk-util-*" are available. Use them instead of depending on "embulk-core" directly.
-    compile "org.embulk:embulk-util-config:0.2.1"  // 0.2.1 is the latest as of April 26, 2021.
+    compile "org.embulk:embulk-util-config:0.3.0"  // 0.3.0 is the latest as of April 27, 2021.
 
     // ...
 
@@ -209,7 +209,7 @@ Once almost all the plugins catch up with v0.11+, they will be free to use their
 Embulk plugins have used `org.embulk.config.ConfigSource#loadConfig` and `org.embulk.config.TaskSource#loadTask` to process Embulk configurations. But they're deprecated. Please use an external library [`org.embulk:embulk-util-config`](https://dev.embulk.org/embulk-util-config/) instead.
 
 ```
-compile "org.embulk:embulk-util-config:0.2.1"
+compile "org.embulk:embulk-util-config:0.3.0"
 ```
 
 The usage is not very complicated. At first, `@Config`, `@ConfigDefault`, and `Task` need to be replaced to `embulk-util-config`'s.
