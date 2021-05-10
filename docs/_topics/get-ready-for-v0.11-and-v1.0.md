@@ -466,6 +466,18 @@ compile "javax.annotation:javax.annotation-api:1.2"
 
 `Exec.getLogger` is deprecated. Use [SLF4J](http://www.slf4j.org/)'s [`org.slf4j.LoggerFactory.getLogger`](https://www.javadoc.io/doc/org.slf4j/slf4j-api/1.7.30/org/slf4j/LoggerFactory.html) directly.
 
+##### Use of `embulk-standards`
+
+The Maven artifact `org.embulk:embulk-standards` no longer exists in Embulk v0.11+. The old standard plugins have been split into separate Maven artifacts, and uploaded in Maven Central. (Ex. [`embulk-input-file`](https://repo1.maven.org/maven2/org/embulk/embulk-input-file/) / [`embulk-guess-csv`](https://repo1.maven.org/maven2/org/embulk/embulk-guess-csv/))
+
+Your plugin can no longer use a class and a method of a standard plugin directly. If main code of your plugin has to use it, use its Maven artifact as a library.
+
+```
+compile "org.embulk:embulk-guess-csv:0.10.??"
+```
+
+If your test code needs a standard plugin, refer the plugin with `testCompile` or `testImplementation`, and register them explicitly from the test code. (See also: [`embulk-parser-csv:0.10.31`'s test](https://github.com/embulk/embulk/blob/v0.10.31/embulk-parser-csv/src/test/java/org/embulk/standards/preview/TestFilePreview.java#L54-L61))
+
 ##### Other utility classes in `org.embulk:embulk-core`
 
 * Processing file-like byte sequence (ex. `FileInputInputStream` and `FileOutputOutputStream` in `org.embulk.spi.util`)
