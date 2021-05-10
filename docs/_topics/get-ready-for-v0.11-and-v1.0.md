@@ -54,7 +54,7 @@ dependencies {
 
     testCompile "org.embulk:embulk-api:0.10.??"
     testCompile "org.embulk:embulk-spi:0.10.??"
-    testCompile "org.embulk:embulk-junit4:0.10.??"
+    testCompile "org.embulk:embulk-junit4:0.10.??"  // Renamed from "embulk-test".
     testCompile "org.embulk:embulk-core:0.10.??"  // "embulk-core" can be used for "testCompile".
     testCompile "org.embulk:embulk-deps:0.10.??"  // "embulk-deps" can be used for "testCompile".
 }
@@ -553,6 +553,12 @@ compile "javax.annotation:javax.annotation-api:1.2"
 | `org.embulk.spi.util.*` | [embulk-util-file](https://dev.embulk.org/embulk-util-file/), [embulk-util-text](https://dev.embulk.org/embulk-util-text/), [embulk-util-dynamic](https://dev.embulk.org/embulk-util-dynamic/), or [embulk-util-retryhelper](https://dev.embulk.org/embulk-util-retryhelper/) |
 
 #### Tests
+
+`org.embulk:embulk-test` that had been used for testing is renamed to `org.embulk:embulk-junit4`.
+
+```
+testCompile "org.embulk:embulk-junit4:0.10.??"
+```
 
 Tests still need to depend on `org.embulk:embulk-core`, and in addition, `org.embulk:embulk-deps`.
 
