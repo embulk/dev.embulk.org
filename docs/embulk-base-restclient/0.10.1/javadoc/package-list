@@ -1,0 +1,5 @@
+org.embulk.base.restclient
+org.embulk.base.restclient.jackson
+org.embulk.base.restclient.jackson.scope
+org.embulk.base.restclient.record
+org.embulk.base.restclient.record.values
