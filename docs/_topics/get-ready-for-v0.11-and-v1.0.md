@@ -1,11 +1,15 @@
 ---
 layout: posts
-title: "For Embulk plugin developers: Get ready for v0.11 and v1.0!"
+title: "For Embulk plugin developers: Get ready for v0.11 and v1.0! [Obsolete]"
 date: 2021-04-26 17:49:30 +0900
-last_modified_at: 2021-04-26 18:02:15 +0900
+last_modified_at: 2023-09-29
 authors:
 - "dmikurube"
 ---
+
+[An updated version](./get-ready-for-v0.11-and-v1.0-updated.html) is published on 2023-09-29.
+
+----
 
 We have worked hard toward Embulk v0.11 and v1.0 since the last announcements on Embulk:
 
