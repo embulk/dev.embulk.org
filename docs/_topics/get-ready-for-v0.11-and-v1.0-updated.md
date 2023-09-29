@@ -273,9 +273,9 @@ String formatted = formatter.format(Instant.ofEpochSecond(1009110896));  // => "
 | `org.joda.time.DateTime` | `java.time.OffsetDateTime` or `java.time.ZonedDateTime` |
 | `org.joda.time.DateTimeZone` | `java.time.ZoneOffset` or `java.time.ZoneId` |
 | `org.joda.time.DateTimeZone` in `PluginTask` | `java.time.ZoneId` with `org.embulk.util.config.modules.ZoneIdModule` in [embulk-util-config](https://dev.embulk.org/embulk-util-config/) if needed |
-| `Timestamp` | `java.time.Instant` |
-| `TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
-| `TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
+| `org.embulk.spi.time.Timestamp` | `java.time.Instant` |
+| `org.embulk.spi.time.TimestampFormatter` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
+| `org.embulk.spi.time.TimestampParser` | `org.embulk.util.timestamp.TimestampFormatter` in [embulk-util-timestamp](https://dev.embulk.org/embulk-util-timestamp/) |
 
 #### Cleanup dependencies: JSON and Jackson
 
