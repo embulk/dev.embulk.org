@@ -492,8 +492,8 @@ Tests still need to depend on `org.embulk:embulk-core`, and in addition, `org.em
 
 ```
     // build.gradle
-    testCompile "org.embulk:embulk-core:0.11.0"
-    testCompile "org.embulk:embulk-deps:0.11.0"
+    testImplementation "org.embulk:embulk-core:0.11.0"
+    testImplementation "org.embulk:embulk-deps:0.11.0"
 ```
 
 You may want to use some internal `embulk-core` classes in tests. Typical instances can be retrieved from `org.embulk.spi.ExecInternal`, such as `ExecInternal.getModelManager()` to get `org.embulk.config.ModelManager`.
